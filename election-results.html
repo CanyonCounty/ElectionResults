@@ -3,31 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <title>Ajax Demo</title>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,300' rel='stylesheet' type='text/css'>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <a href="index.html" class="main-menu">Home</a>
-      <a href="election-results.html" class="main-menu">Election Results</a>
-      <div id="notification-bar">...help...</div>
-      <div class="page">
-        <h1>Election Results</h1>
-        <div id="summary">
-          <div><h2 id="election">ElectionName - 07/04/1776</h2></div>
-          <div>Last Updated: <span id="updated">0</span></div>
-          <div>Total Registered Voters in Precincts Voting: <span id="voting">0</span></div>
-          <div>Ballots Counted: <span id="counted">0</span></div>
-          <div>Registered Voter Turnout: <span id="turnout">0</span></div>
-          <div>Precincts Complete: <span id="complete">0 of 0</span></div>
-        </div>
-        
-        <div id="details">
-          
+     <div class="electionContainer clearfix">
+         <div id="electionTitle">
+            <h2>Election Results</h2>
+            <h3>Last Update <br /><span id="updated">0</span></h3>
+         </div>
+        <div id="electionSummary">
+          <div class="electionLabels" id="label1">Precincts<br />Completed <span id="complete">0 of 0</span></div>
+          <div class="electionLabels" id="label2">Ballots<br />Counted <span id="counted">0</span></div>
         </div>
       </div>
-    </div>
     
     <script>
       $(document).ready(function(event) {

@@ -1,0 +1,46 @@
+.electionContainer {
+    max-width: 748px;
+    background-color: #EEE;
+    font-family: 'Open Sans', sans-serif;
+    color: #212121;
+}
+
+#electionTitle {
+    float: left;
+    background-color: #69213b;
+    padding: 20px;
+    color: white;
+    margin-right: 3%;
+}
+
+#electionTitle h2, #electionTitle h3 { text-align: center; line-height: 24px; margin: 0; }
+#electionTitle h2 { font-size: 24px; font-weight: 400 }
+#electionTitle h3 { font-size: 14px; font-weight: 300; font-style: italic; }
+#electionTitle h3 span#updated { font-size: 18px; }
+#electionSummary { padding-top: 30px; }
+
+.electionLabels { 
+    padding-right: 3%;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: lowercase;
+    line-height: 20px;
+    float: left;
+    max-width: 33%;
+}
+#label2 { padding-right: 0; }
+
+#totalcounted, #counted {
+    font-size: 42px;
+    font-weight: 400;
+    color: #2f5065;
+    vertical-align: ;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
