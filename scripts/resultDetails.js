@@ -54,22 +54,29 @@ var drawParty = function(data, index) {
 var drawContests = function(data) {
   var partyTab = "#" + partyLinkName(data.PartyName);
   $.each(data.Contests, function(index, row) {
-    //alert(JSON.stringify(row));
-    //$('<input/>', {'value':row.Name, attr:{size: "75"}}).appendTo("#electionDetails");
-    $('<br>').appendTo(partyTab);
-    $('<input/>', {'value':row.Name, attr:{size: "75"}}).appendTo(partyTab);
-    $('<br>').appendTo(partyTab);
-    drawChoices(row, partyTab);
+    var h2 = $('<h2/>', {'text':row.Name, attr:{class: "contest"}});
+    var div = $("<div>", {"html":h2}).attr('id', 'contest' + index);
+    drawChoices(row, div);
+    div.appendTo(partyTab);
   });
-  $('<br>').appendTo(partyTab);
 };
 
-var drawChoices = function(data, tab) {
+var drawChoices = function(data, div) {
   $.each(data.Choices, function(index, row) {
-    $('<input/>', {'value':row.Name, attr:{size: "30"}}).appendTo(tab);
-    $('<input/>', {'value':row.VoteCount, attr:{size: "30"}}).appendTo(tab);
-    $('<input/>', {'value':row.Percentage, attr:{size: "30"}}).appendTo(tab);
-    $('<br>').appendTo(tab);
+    //if (!isNaN(parseInt(row.VoteCount))) {
+    var name = row.Name;
+    var voteCount = parseInt(row.VoteCount) || 0;
+    var percentage = row.Percentage || 0.00;
+    var col1 = $('<div/>', {'text':row.Name, attr:{class: "detail choice"}});
+    var col2 = $('<div/>', {'text':voteCount.toLocaleString(), attr:{class: "detail votecount"}});
+    var col3 = $('<div/>', {'text':percentage, attr:{class: "detail percentage"}});
+
+    var sub = $("<div>", {attr:{'class': 'detail-row'}});
+    col1.appendTo(sub);
+    col2.appendTo(sub);
+    col3.appendTo(sub);
+    sub.appendTo(div);
+    //}
   });
 };
 
