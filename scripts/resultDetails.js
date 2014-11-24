@@ -3,7 +3,7 @@
 /* global alert:false */
 
 $(document).ready(function(event) {
-  $.ajax("http://ccmtdev08.canyonco.org/Election/ElectionResultDetails", {
+  $.ajax("http://ccmtprod08.canyonco.org/Election/ElectionResultDetails", {
     success: function(data) {
       if (!data.Error) {
         //alert(data.Results.PartyName.length);
