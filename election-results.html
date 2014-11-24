@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Ajax Demo</title>
+    <title>Election Results Demo</title>
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,300' rel='stylesheet' type='text/css'>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -18,10 +18,21 @@
         <div class="electionLabels" id="label2">Ballots<br />Counted <span id="counted">0</span></div>
       </div>
     </div>
-    <div id="electionDetails">
-        
+    
+    <div id="electionDetails" class="electionContainer clearfix">
+      <div id="div-tabs" class="tabs">
+        <ul id="party-tabs" class="tab-links">
+
+        </ul>
+      </div>
+      
+      <div id="party-content" class="tab-content">
+
+      </div>
     </div>    
+
     <script src="scripts/resultSummary.js"></script>
     <script src="scripts/resultDetails.js"></script>
+    
   </body>
 </html>

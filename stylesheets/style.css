@@ -44,3 +44,22 @@
    height: 0; 
    clear: both;
 }
+
+#electionDetails {
+  padding:10px;
+  margin-top: 30px;
+  max-width:80%;
+}
+
+/* -- Tabs -- */
+/*.reset{background-color:#F5F1DE;border:none;}*/
+ul{margin:0;padding:0;border:0}
+.tabs{padding:0px;width:100%;display:inline-block}
+.tab-links:after{display:block;clear:both;content:''}
+.tab-links li{margin:0 5px;float:left;list-style:none}
+.tab-links a{padding:9px 15px;display:inline-block;border-radius:3px 3px 0 0;background:#EEE;font-size:16px;color:#212121;transition:all linear .15s}
+.tab-links a:hover{background:#FFEE9B;text-decoration:none}
+li.active a,li.active a:hover{background:#69213b;color:white}
+.tab-content{padding:0px 15px;border-radius:3px;box-shadow:-1px 1px 1px rgba(0,0,0,.15);background:#FFF}
+.tab{margin-top:-4px; display:none}
+.tab.active{display:block}
