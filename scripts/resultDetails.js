@@ -55,7 +55,7 @@ var drawContests = function(data) {
   var partyTab = "#" + partyLinkName(data.PartyName);
   $.each(data.Contests, function(index, row) {
     var h2 = $('<h2/>', {'text':row.Name, attr:{class: "contest"}});
-    var div = $("<div>", {"html":h2}).attr('id', 'contest' + index);
+    var div = $("<div>", {"html":h2}).attr('class', 'contest');
     drawChoices(row, div);
     div.appendTo(partyTab);
   });
