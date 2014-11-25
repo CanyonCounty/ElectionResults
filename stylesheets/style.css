@@ -64,3 +64,13 @@ li.active a,li.active a:hover{background:#69213b;color:white}
 .tab{margin-top:-4px; display:none}
 .tab.active{display:block}
 
+/* -- Results -- */
+h2.contest { margin-top: 0; }
+.tab-content { padding-top: 15px; }
+.detail { float: left; margin-right: 20px; }
+.detail-row { clear: both; }
+div.contest { clear:both; padding: 20px; }
+div.contest:nth-child(2n) { background: #eee; }
+.choice { min-width: 50%; }
+.votecount, .percentage { min-width: 20%; text-align: right; }
+.choice, .votecount, .percentage { margin-bottom: 10px; }
