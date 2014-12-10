@@ -5,7 +5,7 @@
   <!-- using google fonts -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,300' rel='stylesheet' type='text/css'>
   <!-- using jquery -->
-  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> 
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
     <style type="text/css">
@@ -18,16 +18,16 @@
         background-color: #EEE;
         font-family: 'Open Sans', sans-serif;
         color: #212121;
-    }  
+    }
     #electionCountdown {
         /*float: left;*/
         background-color: #69213b;
         padding: 20px;
         color: white;
         margin-right: 3%;
-    }  
-  </style> 
-  
+    }
+  </style>
+
   <!-- Just a container for the whole thing -->
   <div class="electionContainer">
     <div id="electionCountdown">
@@ -36,7 +36,7 @@
     <div><span id="moreInfo"></span></div>
     <div>Check out the console for more information (right click -> Inspect Element)</div>
   </div>
-  
+
   <script type="text/javascript">
   // Start to do something after the page is loaded
   $(document).ready(function(event) {
@@ -49,7 +49,12 @@
         // If there is no error
         if (!data.Error) {
           // Change the loading... to the text we want
-          $('#electionCountdown').text(data.ElectionCountdown + ' days until the ' + data.ElectionName);
+          // ElectionCountdown will either be a number or the words Tomorrow or Today
+          if (!isNaN(data.ElectionCountdown)) {
+            $('#electionCountdown').text(data.ElectionCountdown + ' days until the ' + data.ElectionName);
+          } else {
+            $('#electionCountdown').text(data.ElectionName + ' is ' + data.ElectionCountdown + '!');
+          }
           // Dump all the other info
           $('#moreInfo').text("All Info: " + JSON.stringify(data));
         } else {
