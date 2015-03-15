@@ -41,7 +41,7 @@
   // Start to do something after the page is loaded
   $(document).ready(function(event) {
     // Call the method on the middle-tier to get the next election information
-    $.ajax('http://ccmtprod08.canyonco.org/Election/NextElection', {
+    $.ajax('http://api.canyonco.org/Election/NextElection', {
       // if there is no error
       success: function(data) {
         debugger; // pause javascript execution in the debugger/console
