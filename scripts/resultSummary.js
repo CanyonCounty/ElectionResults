@@ -4,7 +4,7 @@
 
 $(document).ready(function(event) {
   // Election Results - Summary
-  $.ajax("http://ccmtprod08.canyonco.org/Election/ResultSummary", {
+  $.ajax("http://api.canyonco.org/Election/ElectionResultSummary", {
     success: function(data) {
       if (!data.Error) {
         $("#election").text(data.ElectionName + ' - ' + data.ElectionDate);
