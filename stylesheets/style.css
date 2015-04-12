@@ -52,7 +52,6 @@
 }
 
 /* -- Tabs -- */
-/*.reset{background-color:#F5F1DE;border:none;}*/
 ul{margin:0;padding:0;border:0}
 .tabs{padding:0px;width:100%;display:inline-block}
 .tab-links:after{display:block;clear:both;content:''}
